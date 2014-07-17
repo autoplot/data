@@ -1,0 +1,10 @@
+# Java Exceptions need to be caught separately from Python Exceptions.
+
+try:
+  #raise Exception('Python Exception')      # python
+  #None.printStackTrace()                   # python
+  raise java.lang.IllegalArgumentException('bad')
+except Exception, ex:
+  print 'Caught >>Exception<<'
+except java.lang.Exception, ex:
+  print 'Caught >>java.lang.Exception<<'

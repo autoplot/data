@@ -1,0 +1,17 @@
+ds= getDataSet('vap:http://autoplot.org/data/autoplot.cdf?Magnitude')
+ds.putProperty( QDataSet.DEPEND_0, timegen( "2010-03-01", "1 hr", 24 ) )
+formatDataSet( ds+0, "file:///tmp/data_2010_03_01_v1.00.qds" )
+
+ds= getDataSet('vap:http://autoplot.org/data/autoplot.cdf?Magnitude')
+ds.putProperty( QDataSet.DEPEND_0, timegen( "2010-03-02", "1 hr", 24 ) )
+formatDataSet( ds+0, "file:///tmp/data_2010_03_02_v1.00.qds" )
+
+ds= getDataSet('vap:http://autoplot.org/data/autoplot.cdf?Magnitude')
+ds.putProperty( QDataSet.DEPEND_0, timegen( "2010-03-02", "1 hr", 24 ) )
+formatDataSet( ds+2, "file:///tmp/data_2010_03_02_v1.02.qds" )
+
+ds= getDataSet('vap:http://autoplot.org/data/autoplot.cdf?Magnitude')
+ds.putProperty( QDataSet.DEPEND_0, timegen( "2010-03-03", "1 hr", 24 ) )
+formatDataSet( ds+4, "file:///tmp/data_2010_03_03_v1.00.qds" )
+
+

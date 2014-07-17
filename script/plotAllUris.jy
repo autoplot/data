@@ -1,0 +1,103 @@
+# plot all URIs in file
+
+tag =  '20111001.0835'
+
+from java.io import File
+from org.virbo.cdf import CdfUtil
+from org.autoplot.pngwalk import ImageResize
+
+org.virbo.autoplot.Util.copyFile( java.io.File( '/home/jbf/ct/autoplot/cdf/plotAllUris.jy' ), java.io.File( '/home/jbf/ct/autoplot/cdf/plotAllUris.%s.jy' % tag ) )
+
+file= getParam( 'listFile', '/home/jbf/ct/autoplot/cdf/plotMe.txt', 'A file containing a list of URIs' )
+f= open( file, 'r' )
+
+errFile= open( '/home/jbf/ct/autoplot/cdf/plotMe.errors.%s.txt' % tag, 'a' )
+i=0
+
+memFile= open( '/home/jbf/ct/autoplot/cdf/plotMe.mem.%s.txt' % tag, 'a' )
+memFile.write( 'freeMemory(MB),totalMemory(MB),memory(MB),etm(sec),ctm(sec),line\n' )
+currentURI= None
+t0=  java.lang.System.currentTimeMillis()
+
+class EH( org.das2.util.ExceptionHandler ):
+   def handle( self, t ):
+      print( t.toString() )
+      errFile.write( '===============\n' )
+      ctm= java.lang.System.currentTimeMillis()-t0
+      errFile.write( '%5d %s \n' % ( ctm, currentURI ) )
+      errFile.write( '%s\n' % t.toString() )
+      errFile.flush()
+   def handleUncaught( self, t ):
+      print( t.toString() )
+      errFile.write( '===============\n' )
+      ctm= java.lang.System.currentTimeMillis()-t0
+      errFile.write( '%5d %s \n' % ( ctm, currentURI ) )
+      errFile.write( '%s\n' % t.toString() )
+      errFile.flush()
+eh= EH()
+getApplicationModel().setExceptionHandler(eh)
+
+monitor.started()
+
+dom.canvases[0].width=640
+dom.canvases[0].height=480
+
+for line in f:
+  if ( len(line)==0 or line[0]=='#' ): continue
+  i=i+1
+
+  line= line[:-1]
+
+  monitor.setTaskProgress(i)
+  monitor.setProgressMessage( line )
+  if ( monitor.isCancelled() ): break
+
+  fm= java.lang.Runtime.getRuntime().freeMemory()/1024/1024
+  tm= java.lang.Runtime.getRuntime().totalMemory()/1024/1024
+  ctm= java.lang.System.currentTimeMillis()-t0
+
+  if ( line.count('WAVEFORM_WBD' )>0 ): continue     # runs out of memory
+  if ( line.count('ds=I2_NEPROF_TOPIST&id=niLog10' )>0 ): continue # memory
+  if ( line.count('vap+cdaweb:ds=AC_H1_SIS&id=cnt_Al' )>0 ): continue # memory
+  if ( line.count('vap+cdaweb:ds=AC_H2_SIS&id=cnt_Al' )>0 ): continue # memory
+  if ( line.count('%eq' )>0 ): continue # malformed
+  if ( line.count('vap+cdaweb:ds=FA_K0_DCF&id=DENSITY&timerange=2002-10-25' )>0 ): continue # contains no records
+
+  line= line + "&nohistory=true"
+  currentURI= line
+  print '=== %s ========' % line
+  try:
+     import string
+     ff=string.replace(line[11:],'&',',')
+     ff=string.replace(ff,'=','_')
+     mySafeName= safeName( ff )
+     if ( File( '/home/jbf/ct/autoplot/cdf/pngs.%s/%05d_%s.png' % ( tag, i, mySafeName ) ).exists() ):
+         print '...already calculated'
+         continue;
+
+     #plot( line )
+     ds= getDataSet( line )
+     #ds= dom.dataSourceFilters[0].controller.fillDataSet
+     print '  %s' % ds.toString()
+     mem= CdfUtil.jvmMemory( ds )/1024/1024
+     etm= java.lang.System.currentTimeMillis()-(t0+ctm)
+     memFile.write( '%9d, %9d, %9d, %9.3f, %16.3f, %s\n' % ( fm, tm, mem, etm/1000., ctm/1000., line ) )
+     memFile.flush()
+     java.io.File('/home/jbf/ct/autoplot/cdf/pngs.%s/' % tag ).mkdirs()
+     writeToPng( '/home/jbf/ct/autoplot/cdf/pngs.%s/%05d_%s.png' % ( tag, i, mySafeName ) )
+
+     image= writeToBufferedImage()
+     thumb= ImageResize.getScaledInstance( image, 400 );
+     java.io.File('/home/jbf/ct/autoplot/cdf/pngs.%s/thumbs400/' % tag ).mkdirs()
+     writeToPng( thumb, '/home/jbf/ct/autoplot/cdf/pngs.%s/thumbs400/%05d_%s.png' % ( tag, i, mySafeName ) )
+
+
+  except Exception, ex:                         # python 2.6 syntax is different.
+     print 'Exception: '+currentURI
+     
+     errFile.write( '=============== (pyexcept) \n' )
+     errFile.write( str(ex) )
+     ctm= java.lang.System.currentTimeMillis()-t0
+     errFile.write( '%5d %s \n' % ( ctm, currentURI ) )
+     errFile.flush()
+

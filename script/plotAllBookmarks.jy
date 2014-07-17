@@ -1,0 +1,39 @@
+from javax.xml.parsers import ParserConfigurationException
+from javax.xml.parsers import DocumentBuilderFactory
+from javax.xml.xpath import XPath
+from javax.xml.xpath import XPathExpressionException
+from javax.xml.xpath import XPathFactory
+from javax.xml.xpath import XPathConstants
+from org.xml.sax import InputSource
+from org.virbo.dataset import DDataSet
+
+from java.io import File
+from java.io import FileInputStream
+
+file= File( '/home/weigel/autoplot_data/bookmarks/bookmarks.xml' )
+myin= FileInputStream( file )
+builder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+source = InputSource( myin )
+initialDocument = builder.parse(source)
+
+factory= XPathFactory.newInstance()
+xpath= factory.newXPath()
+temps= xpath.evaluate( '//uri', initialDocument, XPathConstants.NODESET )
+
+print 'Found ' + str(temps.getLength()) + ' bookmarks'
+#for i in range(temps.getLength()):
+for i in range(10,20):
+  uri= xpath.evaluate('text()', temps.item(i), XPathConstants.STRING)
+  print i, uri
+  try: 
+    setDataSourceURL( uri )
+    setTitle( uri )
+    fname = uri.replace('http://autoplot.org/data/jyds/spidr.jyds?param=','') 
+    fname = uri.replace('timerange=','')   
+    fname = fname.replace('&','-')
+    writeToPng( fname + '.png' )
+    print 'Wrote ' +  fname + '.png'
+  except Exception, ex:
+     print '# unable to plot ' + uri + ' because of ' + str(ex)
+  except java.lang.Exception, ex:
+     print '# unable to plot ' + uri + ' because of ' + str(ex)

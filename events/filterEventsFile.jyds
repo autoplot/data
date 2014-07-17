@@ -1,0 +1,35 @@
+# this demonstrates a filter script, which filters a file.  
+# A web log is read, and the hits are returned as an events QDataSet.
+# Note the data source editor has special code to support the resourceURI part.
+
+#Example record:
+#0         1         2         3         4         5
+#173.192.34.95 - - [01/Jan/2011:19:34:03 -0500] "GET /jnlp/20100928/autoplot.jnlp 
+
+f= getParam( 'resourceURI', 'http://autoplot.org/data/events/downloads.20110108.log', 'the http log file' )
+
+tp= TimeParser.create("$d/$b/$Y:$H:$M:$S")  # note we don't support timezone part (yet)
+
+eu= org.das2.datum.EnumerationUnits.create('events')
+
+xxb= org.virbo.dsutil.DataSetBuilder(1,10)
+xxb.putProperty( QDataSet.UNITS, Units.us2000 )
+yyb= org.virbo.dsutil.DataSetBuilder(1,10)
+yyb.putProperty( QDataSet.UNITS, eu )
+
+localFile= org.virbo.datasource.DataSetURI.getFile(f,monitor).toString()  #TODO: this is confusing we should put a helper in jython space
+
+myf= open(localFile,'r')
+for line in myf:
+   print line
+   ff= line.split(' ')
+   time= ff[3][1:]
+   xxb.putValue( -1, tp.parse( time ).getTime(Units.us2000) )
+   yyb.putValue( -1, eu.createDatum( ff[0]+'!c'+ff[6] ).doubleValue(eu) )
+   xxb.nextRecord()
+   yyb.nextRecord()
+
+data= link( xxb.getDataSet(), yyb.getDataSet() )
+data.putProperty( QDataSet.TITLE, 'autoplot.jnlp downloads' )
+
+#data.putProperty( QDataSet.RENDER_TYPE, 'eventsBar' )

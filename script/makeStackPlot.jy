@@ -1,0 +1,20 @@
+# label: Make Stack Plot 
+# title:break apart current plot by adding plots and moving plot elements
+
+from org.virbo.autoplot.layout import LayoutConstants
+p= dom.controller.plot
+pp= dom.controller.getPlotElementsFor(p)
+
+recycle= [ p ]
+
+for pp1 in pp:
+   if ( pp1.isActive() ):
+      print pp1.getLegendLabel()
+      if ( len(recycle)>0 ): 
+         plot= recycle.pop()
+      else:
+         plot= dom.controller.addPlot( p, LayoutConstants.BELOW )
+         p= plot
+         pp1.setPlotId( plot.getId() )
+
+    

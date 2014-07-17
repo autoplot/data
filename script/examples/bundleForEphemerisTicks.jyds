@@ -1,0 +1,27 @@
+# demonstrate how two quantities on the same cadence can be bundled
+# to make multi-line empheris ticks (TCAs).
+
+# allow the dataset to be browsed for any time.  This may become
+# unnecessary in the future.
+tr= getParam( 'timerange', '2012-06-12', 'timerange to load' )
+
+# load rank 1 dist.
+dist= getDataSet('vap+cdaweb:ds=WI_K0_MFI&id=DIST&timerange=%s' % tr )
+
+# load rank 2 bundle.
+pgsm= getDataSet('vap+cdaweb:ds=WI_K0_MFI&id=PGSM&timerange=%s' % tr )
+
+from org.virbo.dataset.DataSetOps import unbundle
+
+if ( dist==None ):
+   result= None
+else:
+   # bundle the four quantities together
+   result= bundle( dist, unbundle(pgsm,0) )
+   result= bundle( result, unbundle(pgsm,1) )
+   result= bundle( result, unbundle(pgsm,2) )
+   result.putProperty( QDataSet.DEPEND_0, dist.property( QDataSet.DEPEND_0 ) )
+
+# this has issues (20120615):
+#   1. dist doesn't get a label
+#   2. I plot the bundle above, and x GSM is "no valid data".  (This may be because ticks are not checking valid range)

@@ -1,0 +1,4 @@
+128.255.33.126 - - [05/Jan/2011:13:07:01 -0500] "GET /jnlp/20100315/autoplot.jnlp HTTP/1.1" 200 4961 "http://www.autoplot.org/jnlp/20100315/" "Mozilla/5.0 (X11; U; SunOS sun4u; en-US; rv:1.8.1.16) Gecko/20080717 SeaMonkey/1.1.11"
+128.255.33.126 - - [05/Jan/2011:13:07:11 -0500] "HEAD /jnlp/20100315/autoplot.jnlp HTTP/1.1" 200 - "-" "JNLP/1.5 javaws/1.5.0_12 (b04) J2SE/1.5.0_12"
+128.255.33.126 - - [05/Jan/2011:13:07:13 -0500] "HEAD /jnlp/20100315/autoplot.jnlp HTTP/1.1" 200 - "-" "JNLP/1.5 javaws/1.5.0_12 (b04) J2SE/1.5.0_12"
+128.255.33.126 - - [05/Jan/2011:13:07:25 -0500] "HEAD /jnlp/20100315/autoplot.jnlp HTTP/1.1" 200 - "-" "JNLP/1.5 javaws/1.5.0_12 (b04) J2SE/1.5.0_12"

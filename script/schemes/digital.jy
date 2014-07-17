@@ -1,0 +1,13 @@
+ds= dataset(3.34)
+ds.putProperty( QDataSet.LABEL, 'answer' )
+
+plot(0,ds)
+
+zz= labels( ['A','B','C','D','E','F','G','H','I','J'] )
+xx= randn(10)
+yy= randn(10)
+
+ds= link( xx,yy,zz )
+ds.putProperty( QDataSet.RENDER_TYPE, 'digital' )
+
+plot(1,ds)

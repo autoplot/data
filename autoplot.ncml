@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <dimension name="time" length="7"/>
+  <dimension name="lat" length="5"/>
+ 
+  <variable name="time" shape="time" type="double">
+    <attribute name="units" value="days since 1970-01-01 00:00:00"/>
+    <attribute name="long_name" value="time"/>
+    <attribute name="standard_name" value="time"/>
+    <values>10227.0 10227.25 10227.5 10227.75 10228.0 10228.25 10228.5</values>
+  </variable>
+  <variable name="lat" shape="lat" type="float">
+    <attribute name="units" value="degrees_north"/>
+    <attribute name="long_name" value="latitude"/>
+    <attribute name="standard_name" value="latitude"/>
+    <values>-2.5 -5.0 -7.5 -10.0 -12.5</values>
+  </variable>
+  <variable name="skt_surface" shape="time lat" type="float">
+    <attribute name="standard_name" value="SkinTemperature"/>
+    <attribute name="long_name" value="Skin Temperature"/>
+    <attribute name="units" value="C"/>
+    <values>1 2 3 4 5 6 7 8 9.1 10 11 12 13 14 15 16 17 18 19 20 21 22.2 23 24 25 26 27 28 29 30 31 32 33 34.3 35</values>
+  </variable>
+</netcdf>

@@ -1,0 +1,18 @@
+# orbit demo
+
+ds= getDataSet('vap+inline:ripples(200,200)+rand(200,200)/10')
+
+t= findgen(2000)
+orbitx= 0 + 20*sin(t/200) + t/10
+orbity= 0 + 30*cos(t/200) + t/10
+
+orb= link( t, orbitx, orbity )
+orb.putProperty( QDataSet.RENDER_TYPE, 'orbitPlot' )
+plotx( 0, ds )
+plotx( 1, orb )
+
+iorbitx= orbitx * 1.0
+iorbity= orbity * 1.0
+samp= interpolate( ds, iorbitx, iorbity )
+
+plotx( 2, t, samp )

@@ -1,0 +1,14 @@
+# demo of color scatter plot
+
+tr= getParam( 'timerange', '1979-05', 'timerange to load' )
+
+theo_gse_x= getDataSet('vap+cdaweb:ds=ISEE1_H0_FE&id=BX&timerange=%s' % tr, monitor  )
+theo_gse_y= getDataSet('vap+cdaweb:ds=ISEE1_H0_FE&id=BY&timerange=%s' % tr )
+
+ettrt= getDataSet('vap+cdaweb:ds=ISEE1_H0_FE&id=ETTRT&timerange=%s' % tr )
+
+if ( theo_gse_x==None ):
+   result= None
+else: 
+   result= link( theo_gse_x,theo_gse_y,ettrt )
+

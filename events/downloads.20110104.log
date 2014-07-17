@@ -1,0 +1,4 @@
+208.107.108.252 - - [04/Jan/2011:00:17:02 -0500] "GET /autoplot.jnlp?ftp://virbo.org/users/obrien/rbw/rbspa HTTP/1.1" 302 310 "-" "Mozilla/5.0 (compatible; MJ12bot/v1.3.3; http://www.majestic12.co.uk/bot.php?+)"
+208.107.108.252 - - [04/Jan/2011:00:17:04 -0500] "GET /autoplot.jnlp?ftp://virbo.org/users/obrien/rbw/rbspa.cdf HTTP/1.1" 302 313 "-" "Mozilla/5.0 (compatible; MJ12bot/v1.3.3; http://www.majestic12.co.uk/bot.php?+)"
+208.107.108.252 - - [04/Jan/2011:00:17:06 -0500] "GET /autoplot.jnlp?GEI HTTP/1.1" 302 290 "-" "Mozilla/5.0 (compatible; MJ12bot/v1.3.3; http://www.majestic12.co.uk/bot.php?+)"
+218.213.130.58 - - [04/Jan/2011:00:47:33 -0500] "GET /jnlp/20081113/autoplot.jnlp HTTP/1.1" 200 5442 "-" "DoCoMo/2.0 P900i(c100;TB;W24H11)(compatible; ichiro/mobile goo;+http://help.goo.ne.jp/door/crawler.html)"

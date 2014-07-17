@@ -1,0 +1,25 @@
+tr= getParam( 'timerange', 'orbit:crres:509', 'timerange to load' )
+
+altitude= getDataSet('vap+cdaweb:ds=CRRES_H0_MEA&id=Altitude&timerange='+tr, monitor )
+latitude= getDataSet('vap+cdaweb:ds=CRRES_H0_MEA&id=Latitude&timerange='+tr )
+longitude= getDataSet('vap+cdaweb:ds=CRRES_H0_MEA&id=Longitude&timerange='+tr )
+
+xx= cos( toRadians( longitude ) ) * altitude
+yy= sin( toRadians( latitude ) ) * altitude
+tt= xx.property( QDataSet.DEPEND_0 )
+tu= org.virbo.dataset.SemanticOps.getUnits(tt)
+
+# trim to the requested range
+trdr= DatumRangeUtil.parseTimeRange(tr)
+rr= where( tt.ge( trdr.min() ).and( tt.le( trdr.max() ) ) )
+yy= yy[rr]
+xx= xx[rr]
+
+# remove strange blips in the orbit data
+sm= smooth(xx,5)
+rr= where( abs(xx-sm) .lt( 100 ) )
+xx= xx[rr]
+yy= yy[rr]
+
+result= link( xx, yy )
+result.putProperty( QDataSet.RENDER_TYPE, 'orbitPlot' )

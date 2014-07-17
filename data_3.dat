@@ -1,0 +1,331 @@
+<html><head>
+    
+
+    <title>Dashboard [Hudson]</title><link rel="stylesheet" type="text/css" href="/hudson/static/66ffcbeb/css/style.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/66ffcbeb/css/color.css" /><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/hudson/static/66ffcbeb/favicon.ico" /><script>var isRunAsTest=false; var rootURL="/hudson";</script><script src="/hudson/static/66ffcbeb/scripts/prototype.js" type="text/javascript"></script><script src="/hudson/static/66ffcbeb/scripts/behavior.js" type="text/javascript"></script><script src="/hudson/static/66ffcbeb/scripts/sortable.js" type="text/javascript"></script><script src="/hudson/static/66ffcbeb/scripts/yui/yahoo/yahoo-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/dom/dom-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/event/event-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/animation/animation-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/dragdrop/dragdrop-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/container/container-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/connection/connection-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/autocomplete/autocomplete-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/menu/menu-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/element/element-beta-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/yui/button/button-min.js"></script><script src="/hudson/static/66ffcbeb/scripts/hudson-behavior.js" type="text/javascript"></script><script>crumb.init("", "");</script><link rel="stylesheet" type="text/css" href="/hudson/static/66ffcbeb/scripts/yui/container/assets/container.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/66ffcbeb/scripts/yui/assets/skins/sam/skin.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/66ffcbeb/scripts/yui/container/assets/skins/sam/container.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/66ffcbeb/scripts/yui/button/assets/skins/sam/button.css" /><link rel="stylesheet" type="text/css" href="/hudson/static/66ffcbeb/scripts/yui/menu/assets/skins/sam/menu.css" /><link title="Hudson" rel="search" type="application/opensearchdescription+xml" href="/hudson/opensearch.xml" /><meta name="ROBOTS" content="INDEX,NOFOLLOW" /><link title="Hudson:All (all builds)" rel="alternate" type="application/rss+xml" href="/hudson/rssAll" /><link title="Hudson:All (all builds) (RSS 2.0)" rel="alternate" type="application/rss+xml" href="/hudson/rssAll?flavor=rss20" /><link title="Hudson:All (failed builds)" rel="alternate" type="application/rss+xml" href="/hudson/rssFailed" /><link title="Hudson:All (failed builds) (RSS 2.0)" rel="alternate" type="application/rss+xml" href="/hudson/rssFailed?flavor=rss20" /><script src="/hudson/static/66ffcbeb/scripts/yui/cookie/cookie-beta-min.js"></script><script>
+        YAHOO.util.Cookie.set("screenResolution", screen.width+"x"+screen.height); 
+            </script></head><body class="yui-skin-sam"><a href="#skip2content" class="skiplink">Skip to content</a><table id="header" cellpadding="0" cellspacing="0" width="100%" border="0"><tr><td id="top-panel" colspan="2"><table cellpadding="0" cellspacing="0" width="100%" border="0"><tr><td style="font-weight:bold; font-size: 2em;"><a href="/hudson/"><img alt="title" src="/hudson/static/66ffcbeb/images/title.png" /></a></td><td style="vertical-align: middle; text-align: right; padding-right: 1em;"><form style="position:relative;" name="search" action="/hudson/search/" class="no-json" method="get"><div id="search-box-minWidth"></div><div id="search-box-sizer"></div><div id="searchform"><input name="q" value="search" id="search-box" class="has-default-text defaulted" /> <a href="http://hudson.gotdns.com/wiki/display/HUDSON/Search+Box"><img alt="help for search" src="/hudson/static/66ffcbeb/images/16x16/help.png" /></a><div id="search-box-completion"></div><script>createSearchBox("/hudson/search/");</script></div></form></td><td id="login-field"><span> <a style="color:inherit" href="/hudson/login?from=%2Fhudson%2F"><b>log in</b></a></span></td></tr></table></td></tr><tr id="top-nav"><td id="left-top-nav"><a href="/hudson/">Hudson</a></td><td id="right-top-nav"><span class="smallfont"><a href="?auto_refresh=true">ENABLE AUTO REFRESH</a></span></td></tr></table><table id="main-table" height="70%" style="background-image: url(/hudson/static/66ffcbeb/images/hudson.png);                background-repeat: no-repeat; background-position: bottom left;" width="100%" border="0"><tr><td id="side-panel" width="20%"><div style="margin-left: 20px; margin-right: 20px; border-top: 1px solid #bbb"></div><div id="navigation"><div id="tasks"><div class="task"><a href="/hudson/people/"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/66ffcbeb/images/24x24/user.gif" /></a> <a href="/hudson/people/">People</a></div><div class="task"><a href="/hudson/builds"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/66ffcbeb/images/24x24/notepad.gif" /></a> <a href="/hudson/builds">Build History</a></div><div class="task"><a href="/hudson/projectRelationship"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/66ffcbeb/images/24x24/search.gif" /></a> <a href="/hudson/projectRelationship">Project Relationship</a></div><div class="task"><a href="/hudson/fingerprintCheck"><img height="24" style="margin: 2px;" alt="" width="24" src="/hudson/static/66ffcbeb/images/24x24/fingerprint.gif" /></a> <a href="/hudson/fingerprintCheck">Check File Fingerprint</a></div></div><table id="buildQueue" class="pane"><tr><td colspan="2" class="pane-header">Build Queue</td></tr><tr><td class="pane" colspan="2">No builds in the queue.</td></tr></table><script defer="defer">refreshPart('buildQueue',"./ajaxBuildQueue");</script><table id="executors" class="pane"><tr><td colspan="3" class="pane-header"><a href='/hudson/computer/'>Build Executor Status</a></td></tr><colgroup><col width="1*" /><col width="200*" /><col width="24" /></colgroup><tr><th class="pane">#</th><th class="pane" colspan="2"><div style="margin-right:19px">Status</div></th></tr><tr><td class="pane" align="right" style="vertical-align: top">1</td><td class="pane">Idle</td><td class="pane"></td></tr></table><script defer="defer">refreshPart('executors',"./ajaxExecutors");</script></div></td><td id="main-panel" width="80%" height="100%"><a name="skip2content"></a><div id="view-message"><div id="description"><div></div></div></div><div class="dashboard"><table cellpadding="0" cellspacing="0" id="viewList"><tr style="height:3px;"><td style="height:3px; padding:0px"></td><td class="active" rowspan="2">All</td><td style="height:3px; padding:0px"></td></tr><tr><td style="border: none; border-bottom: 1px solid #bbb;"> </td><td class="inactive noLeft"><a href="/hudson/view/autoplot-tests/">autoplot-tests</a></td><td class="filler"> </td></tr></table><table id="projectstatus" style="margin-top:0px; border-top: none;" class="sortable pane bigtable"><tr style="border-top: 0px;"><th tooltip="Status of the last build">&nbsp;&nbsp;&nbsp;S</th><th tooltip="Weather report showing aggregated status of recent builds">&nbsp;&nbsp;&nbsp;W</th><th initialSortDir="down">Job</th><th>Last Success</th><th>Last Failure</th><th>Last Duration</th><th width="1"> </th><th> </th></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-all/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-all/">autoplot-all</a></td><td data="2011-10-10T03:06:37Z">
+                  9 hr 34 min
+                  (<a href="job/autoplot-all/lastSuccessfulBuild/">#911</a>)
+              </td><td data="2011-09-16T00:05:58Z">
+                  24 days
+                  (<a href="job/autoplot-all/lastFailedBuild/">#815</a>)
+              </td><td data="23199">23 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-jar-all/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-jar-all/">autoplot-jar-all</a></td><td data="2011-10-10T04:06:37Z">
+                  8 hr 34 min
+                  (<a href="job/autoplot-jar-all/lastSuccessfulBuild/">#2964</a>)
+              </td><td data="2011-10-07T21:07:15Z">
+                  2 days 15 hr
+                  (<a href="job/autoplot-jar-all/lastFailedBuild/">#2952</a>)
+              </td><td data="83733">1 min 23 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-jar-applet/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-jar-applet/">autoplot-jar-applet</a></td><td data="2011-10-10T04:08:01Z">
+                  8 hr 32 min
+                  (<a href="job/autoplot-jar-applet/lastSuccessfulBuild/">#812</a>)
+              </td><td data="2011-08-15T04:07:56Z">
+                  1 mo 26 days
+                  (<a href="job/autoplot-jar-applet/lastFailedBuild/">#752</a>)
+              </td><td data="78869">1 min 18 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="80" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-jar-servlet/lastBuild"><img alt="80%" src="/hudson/static/66ffcbeb/images/32x32/health-60to79.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-60to79.gif" /></td><td>Build stability: 1 out of the last 5 builds failed.</td><td align="right">80</td></tr></tbody></table></div></td><td><a href="job/autoplot-jar-servlet/">autoplot-jar-servlet</a></td><td data="2011-09-26T12:03:44Z">
+                  14 days
+                  (<a href="job/autoplot-jar-servlet/lastSuccessfulBuild/">#19</a>)
+              </td><td data="2011-09-26T11:35:46Z">
+                  14 days
+                  (<a href="job/autoplot-jar-servlet/lastFailedBuild/">#18</a>)
+              </td><td data="21075">21 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-jar-stable/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-jar-stable/">autoplot-jar-stable</a></td><td data="2011-10-10T04:09:20Z">
+                  8 hr 31 min
+                  (<a href="job/autoplot-jar-stable/lastSuccessfulBuild/">#693</a>)
+              </td><td data="2011-01-30T12:36:01Z">
+                  8 mo 13 days
+                  (<a href="job/autoplot-jar-stable/lastFailedBuild/">#446</a>)
+              </td><td data="110192">1 min 50 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="80" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-jar-volatile/lastBuild"><img alt="80%" src="/hudson/static/66ffcbeb/images/32x32/health-60to79.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-60to79.gif" /></td><td>Build stability: 1 out of the last 5 builds failed.</td><td align="right">80</td></tr></tbody></table></div></td><td><a href="job/autoplot-jar-volatile/">autoplot-jar-volatile</a></td><td data="2011-10-10T04:11:10Z">
+                  8 hr 29 min
+                  (<a href="job/autoplot-jar-volatile/lastSuccessfulBuild/">#876</a>)
+              </td><td data="2011-10-07T04:11:15Z">
+                  3 days 8 hr
+                  (<a href="job/autoplot-jar-volatile/lastFailedBuild/">#873</a>)
+              </td><td data="103776">1 min 43 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-release/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-release/">autoplot-release</a></td><td data="2011-09-23T17:17:00Z">
+                  16 days
+                  (<a href="job/autoplot-release/lastSuccessfulBuild/">#63</a>)
+              </td><td data="2011-07-13T18:03:22Z">
+                  2 mo 28 days
+                  (<a href="job/autoplot-release/lastFailedBuild/">#26</a>)
+              </td><td data="118392">1 min 58 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-run-tests/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Test Result: 0 tests in total.</td><td align="right">100</td></tr><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-run-tests/">autoplot-run-tests</a></td><td data="2011-10-10T03:08:49Z">
+                  9 hr 32 min
+                  (<a href="job/autoplot-run-tests/lastSuccessfulBuild/">#2160</a>)
+              </td><td data="2010-05-24T04:08:52Z">
+                  1 yr 4 mo
+                  (<a href="job/autoplot-run-tests/lastFailedBuild/">#353</a>)
+              </td><td data="20">20 ms</td><td></td><td> </td></tr><tr><td data="0"><img alt="Failed" src="/hudson/static/66ffcbeb/images/32x32/red.gif" tooltip="Failed" /></td><td data="0" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test-applet/lastBuild"><img alt="0%" src="/hudson/static/66ffcbeb/images/32x32/health-00to19.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-00to19.gif" /></td><td>Build stability: All recent builds failed.</td><td align="right">0</td></tr></tbody></table></div></td><td><a href="job/autoplot-test-applet/">autoplot-test-applet</a></td><td data="2011-08-21T04:31:36Z">
+                  1 mo 20 days
+                  (<a href="job/autoplot-test-applet/lastSuccessfulBuild/">#769</a>)
+              </td><td data="2011-10-10T04:31:37Z">
+                  8 hr 9 min
+                  (<a href="job/autoplot-test-applet/lastFailedBuild/">#822</a>)
+              </td><td data="10039">10 sec</td><td></td><td> </td></tr><tr><td data="0"><img alt="Failed" src="/hudson/static/66ffcbeb/images/32x32/red.gif" tooltip="Failed" /></td><td data="0" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test-servlet/lastBuild"><img alt="0%" src="/hudson/static/66ffcbeb/images/32x32/health-00to19.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-00to19.gif" /></td><td>Build stability: All recent builds failed.</td><td align="right">0</td></tr></tbody></table></div></td><td><a href="job/autoplot-test-servlet/">autoplot-test-servlet</a></td><td data="2010-03-15T11:56:47Z">
+                  1 yr 6 mo
+                  (<a href="job/autoplot-test-servlet/lastSuccessfulBuild/">#4</a>)
+              </td><td data="2011-09-26T12:04:58Z">
+                  14 days
+                  (<a href="job/autoplot-test-servlet/lastFailedBuild/">#12</a>)
+              </td><td data="11954">11 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test001/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test001/">autoplot-test001</a></td><td data="2011-10-10T03:08:55Z">
+                  9 hr 31 min
+                  (<a href="job/autoplot-test001/lastSuccessfulBuild/">#2294</a>)
+              </td><td data="2011-07-31T03:08:26Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test001/lastFailedBuild/">#2013</a>)
+              </td><td data="5482">5.4 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test002/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test002/">autoplot-test002</a></td><td data="2011-10-10T03:09:00Z">
+                  9 hr 31 min
+                  (<a href="job/autoplot-test002/lastSuccessfulBuild/">#2222</a>)
+              </td><td data="2011-07-31T03:08:28Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test002/lastFailedBuild/">#1941</a>)
+              </td><td data="2198">2.1 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test003/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test003/">autoplot-test003</a></td><td data="2011-10-10T03:09:02Z">
+                  9 hr 31 min
+                  (<a href="job/autoplot-test003/lastSuccessfulBuild/">#2286</a>)
+              </td><td data="2011-09-14T16:29:55Z">
+                  25 days
+                  (<a href="job/autoplot-test003/lastFailedBuild/">#2180</a>)
+              </td><td data="14897">14 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test004/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test004/">autoplot-test004</a></td><td data="2011-10-10T03:09:17Z">
+                  9 hr 31 min
+                  (<a href="job/autoplot-test004/lastSuccessfulBuild/">#2227</a>)
+              </td><td data="2011-07-31T03:08:32Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test004/lastFailedBuild/">#1946</a>)
+              </td><td data="7563">7.5 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="80" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test005/lastBuild"><img alt="80%" src="/hudson/static/66ffcbeb/images/32x32/health-60to79.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-60to79.gif" /></td><td>Build stability: 1 out of the last 5 builds failed.</td><td align="right">80</td></tr></tbody></table></div></td><td><a href="job/autoplot-test005/">autoplot-test005</a></td><td data="2011-10-10T03:09:25Z">
+                  9 hr 31 min
+                  (<a href="job/autoplot-test005/lastSuccessfulBuild/">#2390</a>)
+              </td><td data="2011-10-08T12:10:57Z">
+                  2 days 0 hr
+                  (<a href="job/autoplot-test005/lastFailedBuild/">#2386</a>)
+              </td><td data="34657">34 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test006/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test006/">autoplot-test006</a></td><td data="2011-10-10T03:09:59Z">
+                  9 hr 30 min
+                  (<a href="job/autoplot-test006/lastSuccessfulBuild/">#2206</a>)
+              </td><td data="2011-09-01T20:51:36Z">
+                  1 mo 8 days
+                  (<a href="job/autoplot-test006/lastFailedBuild/">#2024</a>)
+              </td><td data="3994">3.9 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test007/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test007/">autoplot-test007</a></td><td data="2011-10-10T03:10:03Z">
+                  9 hr 30 min
+                  (<a href="job/autoplot-test007/lastSuccessfulBuild/">#2198</a>)
+              </td><td data="2011-08-16T03:10:34Z">
+                  1 mo 25 days
+                  (<a href="job/autoplot-test007/lastFailedBuild/">#1958</a>)
+              </td><td data="22669">22 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test008/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test008/">autoplot-test008</a></td><td data="2011-10-10T03:10:26Z">
+                  9 hr 30 min
+                  (<a href="job/autoplot-test008/lastSuccessfulBuild/">#2219</a>)
+              </td><td data="2011-08-15T21:10:32Z">
+                  1 mo 25 days
+                  (<a href="job/autoplot-test008/lastFailedBuild/">#1976</a>)
+              </td><td data="2603">2.6 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test009/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test009/">autoplot-test009</a></td><td data="2011-10-10T03:10:29Z">
+                  9 hr 30 min
+                  (<a href="job/autoplot-test009/lastSuccessfulBuild/">#2210</a>)
+              </td><td data="2011-08-01T23:11:07Z">
+                  2 mo 9 days
+                  (<a href="job/autoplot-test009/lastFailedBuild/">#1937</a>)
+              </td><td data="32536">32 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="80" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test010/lastBuild"><img alt="80%" src="/hudson/static/66ffcbeb/images/32x32/health-60to79.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-60to79.gif" /></td><td>Build stability: 1 out of the last 5 builds failed.</td><td align="right">80</td></tr></tbody></table></div></td><td><a href="job/autoplot-test010/">autoplot-test010</a></td><td data="2011-10-10T03:11:01Z">
+                  9 hr 29 min
+                  (<a href="job/autoplot-test010/lastSuccessfulBuild/">#5841</a>)
+              </td><td data="2011-10-08T18:16:37Z">
+                  1 day 18 hr
+                  (<a href="job/autoplot-test010/lastFailedBuild/">#5838</a>)
+              </td><td data="3427">3.4 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test011/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test011/">autoplot-test011</a></td><td data="2011-10-10T03:11:05Z">
+                  9 hr 29 min
+                  (<a href="job/autoplot-test011/lastSuccessfulBuild/">#2116</a>)
+              </td><td data="2011-02-26T20:06:52Z">
+                  7 mo 15 days
+                  (<a href="job/autoplot-test011/lastFailedBuild/">#1246</a>)
+              </td><td data="8359">8.3 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test012/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test012/">autoplot-test012</a></td><td data="2011-10-10T03:11:13Z">
+                  9 hr 29 min
+                  (<a href="job/autoplot-test012/lastSuccessfulBuild/">#2174</a>)
+              </td><td data="2011-07-31T03:08:58Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test012/lastFailedBuild/">#1892</a>)
+              </td><td data="15892">15 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test013/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test013/">autoplot-test013</a></td><td data="2011-10-10T03:11:29Z">
+                  9 hr 29 min
+                  (<a href="job/autoplot-test013/lastSuccessfulBuild/">#2130</a>)
+              </td><td data="2011-09-03T03:09:32Z">
+                  1 mo 7 days
+                  (<a href="job/autoplot-test013/lastFailedBuild/">#1959</a>)
+              </td><td data="19351">19 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test014/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test014/">autoplot-test014</a></td><td data="2011-10-10T03:11:48Z">
+                  9 hr 29 min
+                  (<a href="job/autoplot-test014/lastSuccessfulBuild/">#2085</a>)
+              </td><td data="2011-08-01T19:23:57Z">
+                  2 mo 9 days
+                  (<a href="job/autoplot-test014/lastFailedBuild/">#1808</a>)
+              </td><td data="4190">4.1 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test015/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test015/">autoplot-test015</a></td><td data="2011-10-10T03:11:52Z">
+                  9 hr 28 min
+                  (<a href="job/autoplot-test015/lastSuccessfulBuild/">#1902</a>)
+              </td><td data="2011-07-31T03:09:17Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test015/lastFailedBuild/">#1621</a>)
+              </td><td data="11979">11 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test016/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test016/">autoplot-test016</a></td><td data="2011-10-10T03:12:04Z">
+                  9 hr 28 min
+                  (<a href="job/autoplot-test016/lastSuccessfulBuild/">#1879</a>)
+              </td><td data="2011-07-31T03:09:19Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test016/lastFailedBuild/">#1598</a>)
+              </td><td data="4649">4.6 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test018/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test018/">autoplot-test018</a></td><td data="2011-10-10T03:12:09Z">
+                  9 hr 28 min
+                  (<a href="job/autoplot-test018/lastSuccessfulBuild/">#2263</a>)
+              </td><td data="2011-07-31T03:09:21Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test018/lastFailedBuild/">#1982</a>)
+              </td><td data="9560">9.5 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test019/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test019/">autoplot-test019</a></td><td data="2011-10-10T03:12:19Z">
+                  9 hr 28 min
+                  (<a href="job/autoplot-test019/lastSuccessfulBuild/">#1866</a>)
+              </td><td data="2011-06-15T21:09:35Z">
+                  3 mo 26 days
+                  (<a href="job/autoplot-test019/lastFailedBuild/">#1361</a>)
+              </td><td data="3124">3.1 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test020/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test020/">autoplot-test020</a></td><td data="2011-10-10T03:12:22Z">
+                  9 hr 28 min
+                  (<a href="job/autoplot-test020/lastSuccessfulBuild/">#1894</a>)
+              </td><td data="2011-03-10T04:10:10Z">
+                  7 mo 4 days
+                  (<a href="job/autoplot-test020/lastFailedBuild/">#1075</a>)
+              </td><td data="3846">3.8 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test021/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test021/">autoplot-test021</a></td><td data="2011-10-10T03:12:26Z">
+                  9 hr 28 min
+                  (<a href="job/autoplot-test021/lastSuccessfulBuild/">#1721</a>)
+              </td><td data="2011-10-04T16:14:01Z">
+                  5 days 20 hr
+                  (<a href="job/autoplot-test021/lastFailedBuild/">#1690</a>)
+              </td><td data="34901">34 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test022/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test022/">autoplot-test022</a></td><td data="2011-10-10T03:13:00Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test022/lastSuccessfulBuild/">#1697</a>)
+              </td><td data="2011-06-15T21:10:15Z">
+                  3 mo 26 days
+                  (<a href="job/autoplot-test022/lastFailedBuild/">#1192</a>)
+              </td><td data="363">0.36 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test023/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test023/">autoplot-test023</a></td><td data="2011-10-10T03:13:01Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test023/lastSuccessfulBuild/">#1699</a>)
+              </td><td data="2011-07-31T03:09:31Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test023/lastFailedBuild/">#1418</a>)
+              </td><td data="6577">6.5 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test024/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test024/">autoplot-test024</a></td><td data="2011-09-08T12:04:55Z">
+                  1 mo 2 days
+                  (<a href="job/autoplot-test024/lastSuccessfulBuild/">#13</a>)
+              </td><td data="2010-12-09T17:22:41Z">
+                  10 mo
+                  (<a href="job/autoplot-test024/lastFailedBuild/">#2</a>)
+              </td><td data="1920">1.9 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test025/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test025/">autoplot-test025</a></td><td data="2011-10-10T03:13:07Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test025/lastSuccessfulBuild/">#1332</a>)
+              </td><td data="2011-07-31T03:09:32Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test025/lastFailedBuild/">#1051</a>)
+              </td><td data="8905">8.9 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test026/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test026/">autoplot-test026</a></td><td data="2011-10-10T03:13:16Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test026/lastSuccessfulBuild/">#850</a>)
+              </td><td data="2011-04-03T13:51:20Z">
+                  6 mo 9 days
+                  (<a href="job/autoplot-test026/lastFailedBuild/">#115</a>)
+              </td><td data="333">0.33 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test027/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test027/">autoplot-test027</a></td><td data="2011-10-10T03:13:17Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test027/lastSuccessfulBuild/">#1180</a>)
+              </td><td data="2011-05-20T03:10:43Z">
+                  4 mo 23 days
+                  (<a href="job/autoplot-test027/lastFailedBuild/">#570</a>)
+              </td><td data="9280">9.2 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test028/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test028/">autoplot-test028</a></td><td data="2011-10-10T03:13:26Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test028/lastSuccessfulBuild/">#1090</a>)
+              </td><td data="2011-07-31T03:09:38Z">
+                  2 mo 11 days
+                  (<a href="job/autoplot-test028/lastFailedBuild/">#809</a>)
+              </td><td data="4980">4.9 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test029/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test029/">autoplot-test029</a></td><td data="2011-10-10T03:13:31Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test029/lastSuccessfulBuild/">#930</a>)
+              </td><td data="2011-06-02T21:11:01Z">
+                  4 mo 9 days
+                  (<a href="job/autoplot-test029/lastFailedBuild/">#362</a>)
+              </td><td data="1279">1.2 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test030/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test030/">autoplot-test030</a></td><td data="2011-10-10T03:13:32Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test030/lastSuccessfulBuild/">#964</a>)
+              </td><td data="2011-10-06T16:14:50Z">
+                  3 days 20 hr
+                  (<a href="job/autoplot-test030/lastFailedBuild/">#945</a>)
+              </td><td data="5615">5.6 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test032/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test032/">autoplot-test032</a></td><td data="2011-10-10T03:13:38Z">
+                  9 hr 27 min
+                  (<a href="job/autoplot-test032/lastSuccessfulBuild/">#923</a>)
+              </td><td data="2011-10-05T17:13:53Z">
+                  4 days 19 hr
+                  (<a href="job/autoplot-test032/lastFailedBuild/">#899</a>)
+              </td><td data="16228">16 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test033/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test033/">autoplot-test033</a></td><td data="2011-10-10T03:13:54Z">
+                  9 hr 26 min
+                  (<a href="job/autoplot-test033/lastSuccessfulBuild/">#160</a>)
+              </td><td data="2011-09-14T03:12:18Z">
+                  26 days
+                  (<a href="job/autoplot-test033/lastFailedBuild/">#52</a>)
+              </td><td data="85488">1 min 25 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test034/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/autoplot-test034/">autoplot-test034</a></td><td data="2011-10-10T03:15:20Z">
+                  9 hr 25 min
+                  (<a href="job/autoplot-test034/lastSuccessfulBuild/">#165</a>)
+              </td><td data="2011-09-29T12:15:51Z">
+                  11 days
+                  (<a href="job/autoplot-test034/lastFailedBuild/">#114</a>)
+              </td><td data="9482">9.4 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="60" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/autoplot-test035/lastBuild"><img alt="60%" src="/hudson/static/66ffcbeb/images/32x32/health-40to59.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-40to59.gif" /></td><td>Build stability: 2 out of the last 5 builds failed.</td><td align="right">60</td></tr></tbody></table></div></td><td><a href="job/autoplot-test035/">autoplot-test035</a></td><td data="2011-10-03T19:19:05Z">
+                  6 days 17 hr
+                  (<a href="job/autoplot-test035/lastSuccessfulBuild/">#12</a>)
+              </td><td data="2011-10-03T16:47:40Z">
+                  6 days 19 hr
+                  (<a href="job/autoplot-test035/lastFailedBuild/">#9</a>)
+              </td><td data="990">0.99 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/papco/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/papco/">papco</a></td><td data="2011-10-10T08:06:37Z">
+                  4 hr 34 min
+                  (<a href="job/papco/lastSuccessfulBuild/">#145</a>)
+              </td><td data="2011-07-20T08:06:36Z">
+                  2 mo 22 days
+                  (<a href="job/papco/lastFailedBuild/">#58</a>)
+              </td><td data="16924">16 sec</td><td></td><td> </td></tr><tr><td data="4"><img alt="Success" src="/hudson/static/66ffcbeb/images/32x32/blue.gif" tooltip="Success" /></td><td data="100" class="healthReport" onmouseover="this.className='healthReport hover';return true;
+        " onmouseout="this.className='healthReport';return true;"><a href="job/vncserver/lastBuild"><img alt="100%" src="/hudson/static/66ffcbeb/images/32x32/health-80plus.gif" /></a><div class="healthReportDetails"><table border="0"><thead><tr><th align="left">W</th><th align="left">Description</th><th align="right">%</th></tr></thead><tbody><tr><td align="left"><img title="" alt="" src="/hudson/static/66ffcbeb/images/16x16/health-80plus.gif" /></td><td>Build stability: No recent builds failed.</td><td align="right">100</td></tr></tbody></table></div></td><td><a href="job/vncserver/">vncserver</a></td><td data="2011-01-29T16:26:16Z">
+                  8 mo 13 days
+                  (<a href="job/vncserver/lastSuccessfulBuild/">#15</a>)
+              </td><td data="2009-11-22T13:22:30Z">
+                  1 yr 10 mo
+                  (<a href="job/vncserver/lastFailedBuild/">#5</a>)
+              </td><td data="121">0.12 sec</td><td></td><td> </td></tr></table><table style="width:100%"><tr><td>Icon:
+         <a href="/hudson/iconSize?16x16">S</a> <a href="/hudson/iconSize?24x24">M</a> L</td><td><div align="right" style="margin:1em"><a href="/hudson/legend">Legend</a><span style="padding-left:1em"><a href="rssAll"><img alt="Feed" src="/hudson/static/66ffcbeb/images/atom.gif" border="0" /> for all</a></span><span style="padding-left:1em"><a href="rssFailed"><img alt="Feed" src="/hudson/static/66ffcbeb/images/atom.gif" border="0" /> for failures</a></span><span style="padding-left:1em"><a href="rssLatest"><img alt="Feed" src="/hudson/static/66ffcbeb/images/atom.gif" border="0" /> for just latest builds</a></span></div></td></tr></table></div></td></tr></table><table width="100%"><tr><td id="footer"><span style="padding-right:2em; color:gray">
+          Page generated:
+          Oct 10, 2011 7:40:52 AM</span><a href="http://hudson-ci.org/">Hudson ver. 1.384</a></td></tr></table><script>Behaviour.addLoadEvent(function() {
+            downloadService.download(
+                "default",
+                "http://updates.hudson-labs.org/update-center.json",
+                {version:"1.384"},
+                "/hudson/updateCenter/byId/default/postBack",
+                null);
+        });</script><script>Behaviour.addLoadEvent(function() {  downloadService.download("hudson.tools.JDKInstaller","http://updates.hudson-labs.org/updates/hudson.tools.JDKInstaller.json",{version:"1.384"},"/hudson/descriptor/hudson.model.DownloadService/byId/hudson.tools.JDKInstaller/postBack",null);});</script><script>Behaviour.addLoadEvent(function() {  downloadService.download("hudson.tasks.Maven.MavenInstaller","http://updates.hudson-labs.org/updates/hudson.tasks.Maven.MavenInstaller.json",{version:"1.384"},"/hudson/descriptor/hudson.model.DownloadService/byId/hudson.tasks.Maven.MavenInstaller/postBack",null);});</script><script>Behaviour.addLoadEvent(function() {  downloadService.download("hudson.tasks.Ant.AntInstaller","http://updates.hudson-labs.org/updates/hudson.tasks.Ant.AntInstaller.json",{version:"1.384"},"/hudson/descriptor/hudson.model.DownloadService/byId/hudson.tasks.Ant.AntInstaller/postBack",null);});</script></body></html>
