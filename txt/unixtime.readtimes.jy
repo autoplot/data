@@ -1,0 +1,13 @@
+setScriptDescription('''Read in a list of unix times and reformat them to 
+the time components.  Data is read in from unixtime.onlytime.dat and
+the components are printed to the stdout in the console.
+''')
+
+# unix used to write the unixtime.onlytime.dat file.
+# cat unixtime.dat | awk -F',' '{ print $1 }' > unixtime.onlytime.dat
+
+tp = TimeParser.create('$Y $m $d $H $M $S $(subsec,places=3)')
+ds= getDataSet( PWD + 'unixtime.onlytime.dat')
+for d in ds:
+    t= Units.ms1970.createDatum(d.value())
+    print tp.format(t)
